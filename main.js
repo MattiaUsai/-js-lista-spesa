@@ -3,17 +3,20 @@
 let shopList = ["Pane", "Latte", "Uova", "Farina", "Nutella", "Yougurt" ]
 console.log (shopList)
 
-let conut = 0;
+let i = 0;
 
-while (count < shopList.length) {
-    conut++;
+const list = document.getElementById ("lista-della-spese");
 
-    const list = document.getElementById ("lista-della-spese");
-    let listElement = document.createElement("li");
+while ( i < shopList.length) {
+   
+
     
-    listElement.innerText = shopList[conut];
-    console.log (listElement)
+    const listElement = document.createElement('li');
+    listElement.classList.add ("list-group-item")
     
-    list.append == listElement
-    break;
+    listElement.innerText = shopList[i];
+    console.log (listElement);
+    
+    list.append (listElement);
+    i++;
 }
